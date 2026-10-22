@@ -134,6 +134,25 @@ public abstract class Empleado {
         }
     }
 
+    public ResumenPago generarResumenPago(){
+
+        return new ResumenPago(documento, nombre,
+                categoria,calcularSalarioBruto(),
+                calcularDescuentos(), calcularSalarioNeto());
+    }
+
+    @Override
+    public String toString() {
+        return "Empleado{" +
+                "nombre='" + nombre + '\'' +
+                ", documento='" + documento + '\'' +
+                ", edad=" + edad +
+                ", salarioBasico=" + salarioBasico +
+                ", categoria=" + categoria +
+                ", descuentoSalud=" + descuentoSalud +
+                ", descuentoPension=" + descuentoPension +
+                '}';
+    }
 
     public abstract float calcularSalarioBruto();
 }

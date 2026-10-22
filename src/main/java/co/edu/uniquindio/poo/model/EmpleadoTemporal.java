@@ -34,6 +34,4 @@ public class EmpleadoTemporal extends Empleado{
     public float calcularSalarioBruto() {
         return valorDia* diasTrabajados;
     }
-    public
-
 }
